@@ -24,14 +24,14 @@ public class SecondActivity extends AppCompatActivity implements ConnectivityBro
         super.onResume();
         connectivityBroadCast = new ConnectivityBroadCast(this);
         connectivityBroadCast.registerNetworkMonitoringListener(this);
-        this.registerReceiver(connectivityBroadCast, new IntentFilter(android.net.ConnectivityManager.CONNECTIVITY_ACTION));
+        registerReceiver(connectivityBroadCast, new IntentFilter(android.net.ConnectivityManager.CONNECTIVITY_ACTION));
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         connectivityBroadCast.unregisterNetworkMonitoringListener(this);
-        this.unregisterReceiver(connectivityBroadCast);
+        unregisterReceiver(connectivityBroadCast);
     }
 
     @Override
