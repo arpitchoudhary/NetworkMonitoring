@@ -1,5 +1,5 @@
 # NetworkMonitoring
-Network Monitoring Application sample.
+Network Monitoring Application sample - Android.
 
 Today most of the application rely on Internet Connection for regular updates on application data,
 or to execute long running download operation.
